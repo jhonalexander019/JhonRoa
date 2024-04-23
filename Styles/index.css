@@ -1,0 +1,82 @@
+/* Variables CSS */
+:root {
+    --primary-color: #17191D;
+    --secondary-color: #C0C9CA;
+    --text-color: #F8F8F5;
+    --second-word: #86c3ff;
+    --skill-words: #476165;
+    --skills: #4b4968;
+}
+
+/* Estilos generales */
+* {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Estilos para el header */
+header > nav {
+    width: 100vw;
+    height: 6vh;
+    min-height: 40px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+/* Efecto de relieve en el header */
+header > nav::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary-color);
+    filter: blur(3px);
+    z-index: -1;
+}
+
+/* Estilos para la lista de navegación */
+nav > ul {
+    margin: 0 3vw 0 0;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+/* Estilos para los elementos de la lista de navegación */
+nav > ul > li {
+    margin: 0 2vw;
+}
+
+/* Estilos para el logo */
+.logo {
+    margin-left: 3vw;
+    font-size: 2.5vw;
+}
+
+.logo .first-word {
+    font-family: 'Montserrat';
+}
+
+.logo .second-word {
+    font-family: 'Poller One';
+    color: var(--second-word);
+}
+
+
+.tools {
+    margin-top: 20px;
+}

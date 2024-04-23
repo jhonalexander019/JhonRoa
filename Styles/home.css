@@ -1,0 +1,85 @@
+#home {
+    height: 100vh;
+    background: linear-gradient(0deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content > article > svg > image {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.6));
+}
+
+.content > article {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.content > article > h1 {
+    font-size: 5vw;
+    margin: inherit;
+}
+
+.content > article .third-word {
+    color: var(--primary-color);
+}
+
+.content > article > .carousel {
+    display: flex;
+    width: 40vw;
+    overflow: hidden;
+    margin-top: 12vh;
+}
+
+.content > article > .carousel > ul {
+    margin: 0 3vw 0 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    list-style-type: none;
+    justify-content: space-evenly;
+    animation: desplazar 40s linear infinite;
+}
+
+.content > article > .carousel > ul > li > img.icon-wepb {
+    width: 4vw;
+}
+
+.content > article > .carousel > ul:hover {
+    animation-play-state: paused;
+}
+
+/* Animación para desplazar */
+@keyframes desplazar {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(calc(-60vw));
+    }
+}
+
+.content > article > .carousel > ul > li {
+    position: relative;
+    display: inline-block;
+}
+
+.content > article > .carousel > ul > li:hover {
+    transform: scale(1.04) rotate(-1deg);
+}
+
+.content > article > .carousel > ul > li > .tooltip {
+    color: white;
+    border-radius: 6px;
+    padding: 5px;
+    z-index: 1;
+    transition: opacity 0.3s;
+}

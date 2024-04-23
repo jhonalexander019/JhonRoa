@@ -1,0 +1,150 @@
+#skills {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    background: var(--primary-color);
+    flex-direction: row;
+    gap: 2vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#skills > .container{
+    height: 80vh;
+
+}
+
+#skills > .mac-window {
+    width: 40vw;
+    height: 40vh;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+#skills > .mac-window > .mac-window-topbar {
+    background-color: #454340;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+}
+
+
+#skills > .mac-window > .mac-window-topbar > .mac-window-buttons {
+    display: flex;
+    gap: 0.5vw;
+}
+
+#skills > .mac-window > .mac-window-topbar > .mac-window-buttons > p{
+    letter-spacing: 3px;
+}
+
+
+#skills > .mac-window > .mac-window-topbar > .mac-window-buttons > .mac-window-button {
+    width: 1vw;
+    height: 2vh;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+#skills > .mac-window > .mac-window-topbar > .mac-window-buttons > .mac-window-button.close {
+    background-color: #ff5f56; /* Rojo */
+}
+
+#skills > .mac-window > .mac-window-topbar > .mac-window-buttons > .mac-window-button.minimize {
+    background-color: #ffbd2e; /* Amarillo */
+}
+
+#skills > .mac-window > .mac-window-topbar > .mac-window-buttons > .mac-window-button.maximize {
+    background-color: #27c93f; /* Verde */
+}
+
+#skills > .mac-window > .mac-window-content {
+    padding: 3%;
+    gap: 1rem;
+    height: -webkit-fill-available;
+    background-color: white;
+}
+
+#skills > .mac-window > .mac-window-content > * {
+    margin-bottom: 1rem; /* Ajusta el valor según sea necesario */
+}
+
+#skills > .mac-window > .mac-window-content > p{
+    color: var(--skill-words);
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    word-spacing: 4px;
+}
+
+#skills > .mac-window > .mac-window-content > p > strong{
+    color: var(--skills);
+}
+
+.wrapper {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.custom-shape-divider-top-1685513857 {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1685513857 img {
+    position: relative;
+    display: block;
+    width: calc(90% + 1123.8px);
+    height: 224px;
+}
+
+.custom-shape-divider-bottom-1685513857 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1685513857 img {
+    position: relative;
+    display: block;
+    width: calc(90% + 1123.8px);
+    height: 224px;
+}
+
+#skills > .carousel2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+    overflow: hidden;
+}
+
+#skills > .carousel2 > h2 {
+    font-size: 5vw;
+    margin: inherit;
+    color: var(--second-word);
+    margin-bottom: 2vh;
+}
+
+#skills > .carousel2 > ul {
+    display: flex;
+    flex-wrap: wrap; /* Esto permite que los elementos se envuelvan en una nueva línea si no caben */
+    flex-direction: row; /* Asegura que los elementos se alineen horizontalmente */
+    width: 30vw;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#skills > .carousel2 > ul > li > img.icon-wepb {
+    width: 4vw;
+}
