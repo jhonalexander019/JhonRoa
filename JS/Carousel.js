@@ -1,11 +1,13 @@
 // Obtener el elemento ul donde se agregarán los iconos
 const iconList = document.getElementById('icon-list');
 const iconList2 = document.getElementById('icon-list2');
+const iconList3 = document.getElementById('icon-list3');
 
 
 // Array con los nombres de los archivos wepb (sin la extensión)
-const Icons = ['github', 'tailwind', 'react', 'npm', 'bootstrap', 'JS', 'ts', 'angular', 'HTML', 'nextjs', 'nodeJS', 'java', 'springboot', 'kotlin', 'css'];
-const Skills = ['tailwind', 'npm', 'bootstrap', 'JS', 'ts', 'HTML', 'nodeJS', 'java', 'kotlin', 'css'];
+const Icons = ['GitHub', 'TailWind', 'React', 'npm', 'Bootstrap', 'JS', 'TS', 'Angular', 'HTML', 'NextJS', 'NodeJS', 'Java', 'SpringBoot', 'Kotlin', 'CSS'];
+const Skills = ['TailWind', 'npm', 'Bootstrap', 'JS', 'TS', 'HTML', 'NodeJS', 'Java', 'Kotlin', 'CSS'];
+const Tools = ['Git', 'VisualStudio', 'WebStorm', 'IntelliJ', 'Camunda', 'Postman', 'Figma', 'Docker'];
 
 
 // Iterar sobre los nombres de los archivos wepb
@@ -50,3 +52,20 @@ li2.appendChild(img2);
 iconList2.appendChild(li2);
 
 });
+
+Tools.forEach(skill => {
+    // Crear un elemento li para cada icono en la segunda lista
+    const li3 = document.createElement('li');
+    
+    const img3 = document.createElement('img');
+    img3.src = `./Img/Icons/${skill}.webp`;
+    img3.alt = `Icono ${skill}`;
+    img3.classList.add('icon-wepb');
+    img3.loading = 'lazy';
+    
+    li3.appendChild(img3);
+    
+    iconList3.appendChild(li3);
+    
+    });
+    

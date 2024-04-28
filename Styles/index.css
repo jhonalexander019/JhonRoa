@@ -17,6 +17,7 @@
     text-decoration: none;
     color: var(--text-color);
     transition: 1s ease-in-out;
+    scroll-behavior: smooth;
 }
 
 /* Estilos para el header */

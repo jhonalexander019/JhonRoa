@@ -1,0 +1,62 @@
+#tools{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+#tools > .carousel3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: hidden;
+    width: 95%;
+}
+
+#tools > .carousel3 > h2 {
+    font-size: 5vw;
+    margin: inherit;
+    color: var(--second-word);
+    margin-bottom: 2vh;
+}
+
+#tools > .carousel3 > #icon-list3 {
+    display: inline-flex;
+    gap: 3vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#tools > .carousel3 > #icon-list3 > li {
+    position: relative; /* Establece la posición relativa para que los pseudoelementos estén posicionados correctamente */
+    overflow: hidden; /* Oculta el desenfoque que se salga del contenedor */
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0px 8px 32px 0px rgba(31, 38, 135, 0.37);
+;
+}
+
+
+#tools > .carousel3 > #icon-list3 > li > img.icon-wepb {
+    position: relative;
+    z-index: 1;
+    filter: blur(0);
+    width: 6rem;
+    margin: 0.5rem;
+}
+
+
+@media screen and (width < 768px) {
+    #tools {
+        flex-direction: column;
+    }
+
+    #tools > .carousel3 > h2 {
+        margin: 15% 7% 0 0 !important;
+        font-size: 3.5rem;
+    }
+    
+}

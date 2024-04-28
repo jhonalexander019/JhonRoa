@@ -1,5 +1,5 @@
 #skills {
-    min-height: 80vh;
+    min-height: 75vh;
     display: flex;
     justify-content: center;
     background: var(--primary-color);
@@ -10,7 +10,7 @@
 }
 
 #skills > .container{
-    height: 80vh;
+    height: 65vh;
 
 }
 
