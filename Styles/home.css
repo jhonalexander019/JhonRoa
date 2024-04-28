@@ -1,30 +1,46 @@
 #home {
-    height: 100vh;
     background: linear-gradient(0deg, var(--secondary-color) 0%, var(--primary-color) 100%);
     display: flex;
     flex-direction: column;
 }
 
 .content {
+    max-height: 120vh;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
+
+svg {
+    width: 50vw;
+    /* height: auto; */
+    margin: -5vw -5vh -10vh -10vw;
+}
+
+.responsive-image,
+.responsive-path {
+    width: 100%; /* Hacer tanto la imagen como el path responsivos */
+    height: auto; /* Ajustar la altura automáticamente para mantener la proporción */
+}
+
 
 .content > article > svg > image {
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.6));
 }
 
 .content > article {
-    width: 50vw;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
 
 .content > article > h1 {
-    font-size: 5vw;
-    margin: inherit;
+    font-size: 5rem;
+}
+
+.content > article > h2 {
+    font-size: 2.5rem;
 }
 
 .content > article .third-word {
@@ -33,53 +49,136 @@
 
 .content > article > .carousel {
     display: flex;
-    width: 40vw;
+    width: 50vw;
     overflow: hidden;
-    margin-top: 12vh;
 }
 
 .content > article > .carousel > ul {
-    margin: 0 3vw 0 0;
+    margin: 2rem;
     display: flex;
     flex-direction: row;
-    gap: 1vw;
+    gap: 2vw;
     list-style-type: none;
     justify-content: space-evenly;
-    animation: desplazar 40s linear infinite;
+    animation: desplazar 10s linear infinite alternate;
+    height: 12.5vh;
 }
 
 .content > article > .carousel > ul > li > img.icon-wepb {
-    width: 4vw;
+    width: 4rem;
+    margin: 0 1vw;
+    z-index: 2;
+    position: relative;
 }
 
 .content > article > .carousel > ul:hover {
     animation-play-state: paused;
 }
 
-/* Animación para desplazar */
-@keyframes desplazar {
-    0%,
-    100% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(calc(-60vw));
-    }
-}
-
 .content > article > .carousel > ul > li {
     position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.content > article > .carousel > ul > li::before{
+    content: ''; /* Agrega contenido al pseudoelemento */
+    position: absolute; /* Establece la posición absoluta para que se superponga al contenido del li */
+    top: 0;
+    left: 0;
+    width: 100%; /* Establece el ancho y alto del pseudoelemento para que cubra todo el li */
+    height: 100%;
+    background-color: rgba(160, 160, 160, 0.5); /* Ajusta el color de fondo para lograr el efecto de desenfoque */
+    box-shadow: 0px 8px 32px 0px rgba(31, 38, 135, 0.37);
+    border-radius: 10%;
+    border: 1px solid rgb(176, 176, 176);
+}
+
+/* Estilo para el li en el hover */
 .content > article > .carousel > ul > li:hover {
-    transform: scale(1.04) rotate(-1deg);
+    border-radius: 10%;
 }
 
+/* Estilo para el ícono en el hover */
+.content > article > .carousel > ul > li:hover > img.icon-wepb {
+    filter: blur(15px); /* Aplica un desenfoque de 5px */
+    transition: filter 0.3s ease; /* Agrega transición suave */
+}
+
+/* Estilo para el ícono */
+.content > article > .carousel > ul > li > img.icon-wepb {
+    display: block;
+    position: relative;
+    z-index: 1; /* Asegura que el ícono esté por encima del tooltip */
+}
+
+/* Estilo para .tooltip */
 .content > article > .carousel > ul > li > .tooltip {
-    color: white;
-    border-radius: 6px;
-    padding: 5px;
-    z-index: 1;
-    transition: opacity 0.3s;
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    z-index: 4;
+    color: black;
+}
+
+/* Estilo para .tooltip cuando se hace hover en el li */
+.content > article > .carousel > ul > li:hover > .tooltip {
+    display: block; /* Cambia el display a block al hacer hover en el li */
+    /* Añade otros estilos según sea necesario */
+}
+
+
+@media screen and (width > 768px) {
+    /* Animación para pantallas más pequeñas */
+    @keyframes desplazar {
+        0% {
+            transform: translateX(1vw); /* No hay desplazamiento al principio */
+        }
+        100% {
+            transform: translateX(calc(-100% + 45vw)); /* Desplazamiento hasta el final de la zona visible */
+        }
+    }
+}
+
+
+@media screen and (width < 768px) {
+    svg {
+        min-width: 22rem;
+        /* height: auto; */
+        margin: -4rem 0 -7rem 0;
+    }
+
+    .content {
+        min-height: 110vh;
+        flex-direction: column;
+        margin-top: -3vh;
+    }
+
+    .content > article > h1, h2 {
+        margin: 0 7%
+    }
+
+    .content > article > h1 {
+        font-size: 3rem;
+    }
+    
+    .content > article > h2 {
+        font-size: 1.5rem;
+    }
+    
+    .content > article > .carousel {
+        width: 90vw;
+    }
+
+    /* Animación para pantallas más grandes */
+    @keyframes desplazar {
+        0% {
+            transform: translateX(1vw); /* No hay desplazamiento al principio */
+        }
+        100% {
+            transform: translateX(calc(-100% + 78vw)); /* Desplazamiento hasta el final de la zona visible */
+        }
+    }
+
 }

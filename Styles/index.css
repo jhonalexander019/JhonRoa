@@ -16,6 +16,7 @@
     padding: 0;
     text-decoration: none;
     color: var(--text-color);
+    transition: 1s ease-in-out;
 }
 
 /* Estilos para el header */

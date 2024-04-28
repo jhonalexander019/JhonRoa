@@ -1,5 +1,5 @@
 #skills {
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     background: var(--primary-color);
@@ -16,7 +16,6 @@
 
 #skills > .mac-window {
     width: 40vw;
-    height: 40vh;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -74,7 +73,7 @@
 
 #skills > .mac-window > .mac-window-content > p{
     color: var(--skill-words);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 4px;
     word-spacing: 4px;
 }
@@ -100,8 +99,8 @@
 .custom-shape-divider-top-1685513857 img {
     position: relative;
     display: block;
-    width: calc(90% + 1123.8px);
-    height: 224px;
+    width: calc(70% + 100vw);
+    height: 20vh;
 }
 
 .custom-shape-divider-bottom-1685513857 {
@@ -116,8 +115,8 @@
 .custom-shape-divider-bottom-1685513857 img {
     position: relative;
     display: block;
-    width: calc(90% + 1123.8px);
-    height: 224px;
+    width: calc(70% + 100vw);
+    height: 20vh;
 }
 
 #skills > .carousel2 {
@@ -135,16 +134,46 @@
     margin-bottom: 2vh;
 }
 
-#skills > .carousel2 > ul {
-    display: flex;
-    flex-wrap: wrap; /* Esto permite que los elementos se envuelvan en una nueva línea si no caben */
-    flex-direction: row; /* Asegura que los elementos se alineen horizontalmente */
-    width: 30vw;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+#skills > .carousel2 > #icon-list2 {
+    display: inline-flex;
+    padding: 10px;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#skills > .carousel2 > ul > li > img.icon-wepb {
-    width: 4vw;
+#skills > .carousel2 > #icon-list2 > li {
+    position: relative; /* Establece la posición relativa para que los pseudoelementos estén posicionados correctamente */
+    overflow: hidden; /* Oculta el desenfoque que se salga del contenedor */
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0px 8px 32px 0px rgba(31, 38, 135, 0.37);
+;
+}
+
+
+#skills > .carousel2 > #icon-list2 > li > img.icon-wepb {
+    position: relative;
+    z-index: 1;
+    filter: blur(0);
+    width: 4rem;
+    margin: 0.5rem;
+}
+
+
+@media screen and (width < 768px) {
+    #skills {
+        flex-direction: column;
+    }
+
+    #skills > .mac-window {
+        width: 90%;
+    }
+
+    #skills > .mac-window > .mac-window-content > p{
+        word-spacing: none;
+    }
+
+    
 }
