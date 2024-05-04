@@ -5,8 +5,8 @@ const iconList3 = document.getElementById('icon-list3');
 
 
 // Array con los nombres de los archivos wepb (sin la extensión)
-const Icons = ['GitHub', 'TailWind', 'React', 'npm', 'Bootstrap', 'JS', 'TS', 'Angular', 'HTML', 'NextJS', 'NodeJS', 'Java', 'SpringBoot', 'Kotlin', 'CSS'];
-const Skills = ['TailWind', 'npm', 'Bootstrap', 'JS', 'TS', 'HTML', 'NodeJS', 'Java', 'Kotlin', 'CSS'];
+const Icons = ['HTML', 'CSS', 'TailWind', 'Bootstrap', 'VisualStudio', 'npm', 'JS', 'React', 'NextJS', 'NodeJS', 'TS', 'Angular', 'WebStorm', 'Java', 'SpringBoot', 'IntelliJ', 'Kotlin', 'Git', 'GitHub', 'Camunda', 'Postman', 'Figma', 'Docker'];
+const Skills = ['HTML', 'CSS', 'Bootstrap', 'TailWind', 'npm', 'JS', 'TS', 'NodeJS', 'Java', 'Kotlin'];
 const Tools = ['Git', 'VisualStudio', 'WebStorm', 'IntelliJ', 'Camunda', 'Postman', 'Figma', 'Docker'];
 
 

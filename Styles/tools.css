@@ -25,8 +25,9 @@
 #tools > .carousel3 > #icon-list3 {
     display: inline-flex;
     gap: 3vw;
-    flex-wrap: wrap;
     justify-content: center;
+    width: 95vw;
+    flex-wrap: wrap;
 }
 
 #tools > .carousel3 > #icon-list3 > li {

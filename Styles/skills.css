@@ -24,7 +24,7 @@
 
 #skills > .mac-window > .mac-window-topbar {
     background-color: #454340;
-    height: 5vh;
+    height: 6vh;
     display: flex;
     align-items: center;
     padding: 0 8px;
@@ -34,6 +34,7 @@
 #skills > .mac-window > .mac-window-topbar > .mac-window-buttons {
     display: flex;
     gap: 0.5vw;
+    align-items: center;
 }
 
 #skills > .mac-window > .mac-window-topbar > .mac-window-buttons > p{

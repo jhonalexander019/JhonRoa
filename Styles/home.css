@@ -60,7 +60,7 @@ svg {
     gap: 2vw;
     list-style-type: none;
     justify-content: space-evenly;
-    animation: desplazar 10s linear infinite alternate;
+    animation: desplazar 20s linear infinite alternate;
     height: 12.5vh;
 }
 
